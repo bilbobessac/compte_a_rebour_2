@@ -1,11 +1,17 @@
 input.onButtonPressed(Button.A, function () {
-    while (compteur > 0) {
-        basic.showNumber(compteur)
-        compteur += -1
+    while (nbre_depart > 0) {
+        basic.showNumber(nbre_depart)
+        nbre_depart += -1
         basic.pause(1000)
     }
     basic.clearScreen()
 })
-let compteur = 0
+input.onButtonPressed(Button.AB, function () {
+    nbre_depart = 0
+})
+input.onButtonPressed(Button.B, function () {
+    nbre_depart += 1
+})
+let nbre_depart = 0
 basic.clearScreen()
-compteur = 10
+nbre_depart = 0
